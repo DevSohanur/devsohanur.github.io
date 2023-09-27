@@ -1,17 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sohanur Rahman</title>
-    <link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="design/homepage.css">
+<title>Sohanur Rahman</title>
+
+<script type="text/javascript">
+            var preDivId = null;
+            function toggle(divId) {
+
+                
+
+                if (preDivId != null) { // one div is already opend. Hide it now.
+                    document.getElementById(preDivId).style.display = "none";
+                }
+
+                if (preDivId == null) { // one div is already opend. Hide it now.
+                    document.getElementById(1).style.display = "none";
+                }
+
+                document.getElementById(divId).style.display = "block";
+                preDivId = divId;
+            }
+
+        </script>
 </head>
 <body>
-    <h1 style="margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;text-align: center;">Welcome to Sohanur's World <br><br> Something Cool Coming Soon <br><br>Stay Tuned</h1>
+
+<div class="sidebar">
+	
+  <img src="pictures/ProfilePicture.png" alt="icon here" style="width:180px;height: auto;padding-left: 10px">
+  
+  <h2 style="padding: 0px 5px">  Sohanur Rahman</h2>
+  
+  <p style="padding: 0px 10px"> iOS Developer</p> 
+
+  <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+  <button onclick="toggle(2)"><img src="pictures/skill.png">Skill</button>
+
+  <button onclick="toggle(3)"><img src="pictures/xcode.png">Recent Projects</button>
+
+  <button onclick="toggle(4)"><img src="pictures/train.png">Professional Training</button>
+
+  <button onclick="toggle(5)"><img src="pictures/blog.png">Blog</button>
+
+  <button onclick="toggle(6)"><img src="pictures/about.jpg">About</button>
+
+  <button onclick="toggle(7)"><img src="pictures/contact.png">Contact</button>
+
+  <br>
+    <a href="https://www.facebook.com/fr2sr" target="_blank"><img src="pictures/fb.png" style=""></a>
+    <a href="https://www.linkedin.com/feed/in/fr2sr" target="_blank"><img src="pictures/linkedin.png" style=""></a>
+    <a href="https://github.com/fr2sr" target="_blank"><img src="pictures/git.png" style=""></a>
+    <a href="https://www.youtube.com/channel/UCCA7-VqoHhaO9N8t1zRvpxQ?view_as=subscriber" target="_blank"><img src="pictures/youtube.png" style=""></a>
+
+  <p style="font-size: 12px;padding-left: 5px">&copy 2020. All rights reserved.</p>
+</div>
+
+
+<div class="content" id="1" >
+  <h1>Home</h1>
+</div>
+
+<div class="content" id="2" style="display: none;">
+  <h1>Skill</h1>
+</div>
+
+<div class="content" id="3" style="display: none;">
+  <h1>Projects</h1>
+</div>
+
+<div class="content" id="4" style="display: none;">
+  <h1>Activities</h1>
+</div>
+
+<div class="content" id="5" style="display: none;">
+  <h1>Blog</h1>
+</div>
+<div class="content" id="6" style="display: none;">
+  <h1>About</h1>
+</div>
+<div class="content" id="7" style="display: none;">
+  <h1>Contact</h1>
+</div>
+
 </body>
 </html>

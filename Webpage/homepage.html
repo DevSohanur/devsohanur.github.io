@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homepage</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+function togglediv(id) {
+  document.querySelectorAll(".TableBody").forEach(function(div) {
+    if (div.id == id) {
+      // Toggle specified DIV
+      div.style.display = div.style.display == "none" ? "block" : "none";
+    } else {
+      // Hide other DIVs
+      div.style.display = "none";
+    }
+  });
+}
+	</script>
+
+<div class="myButtons">
+  <div >
+
+    <button id="Button1"  onclick="togglediv('NamesTable')" type="button"> List of Names </button>
+
+    <button id="Button2" onclick="togglediv('PhoneTable')" type="button"> List of Address </button>
+
+    <button id="Button3" onclick="togglediv('AddressTable')" type="button"> List of Phone#</button>
+
+    <button id="Button4" onclick="togglediv('GradesTable')" type="button"> List of Grades</button>
+
+    <button id="Button5"  onclick="togglediv('SchoolTable')" type="button"> List of Schools </button>
+
+  </div>
+</div>
+
+<div id="NamesTable" class="TableBody" style="display:none">Names </div>
+<div id="PhoneTable" class="TableBody" style="display:none">Address </div>
+<div id="AddressTable" class="TableBody" style="display:none">Phone# </div>
+<div id="GradesTable" class="TableBody" style="display:none">Grades </div>
+<div id="SchoolTable" class="TableBody" style="display:none">School </div>
+</body>
+</html>
