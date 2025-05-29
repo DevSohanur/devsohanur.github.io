@@ -147,3 +147,24 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
   });
 }
+
+
+
+// Sending mail from here
+
+function sendEmail(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const form = document.querySelector('[data-form]');
+    const fullName = form.fullname.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    const subject = encodeURIComponent("New message from " + fullName);
+    const body = encodeURIComponent(`Name: ${fullName}\nEmail: ${email}\n\n${message}`);
+
+    // Replace with your email address
+    const mailtoLink = `mailto:sohanur.cu.bd@gmail.com?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoLink;
+}
